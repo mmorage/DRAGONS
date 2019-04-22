@@ -23,7 +23,9 @@ if not os.path.exists(path):
     path = ''
 
 # Returns list of all files in the TEST_PATH directory
-files_with_directory = glob.glob(os.path.join(path, "*fits"))
+files_with_directory1 = glob.glob(os.path.join(path, "*fits"))
+
+files_with_directory = files_with_directory1[0]
 
 # Separates the directory from the list, helps cleanup code
 fits_files = [os.path.split(_file)[-1] for _file in files_with_directory]
